@@ -2,5 +2,7 @@ pluginManagement { includeBuild("../node_modules/@react-native/gradle-plugin") }
 plugins { id("com.facebook.react.settings") }
 extensions.configure(com.facebook.react.ReactSettingsExtension){ ex -> ex.autolinkLibrariesFromCommand() }
 rootProject.name = 'ChatApp'
+include(':react-native-nitro-modules')
+project(':react-native-nitro-modules').projectDir = file('../node_modules/react-native-nitro-modules/android')
 include ':app'
 includeBuild('../node_modules/@react-native/gradle-plugin')
